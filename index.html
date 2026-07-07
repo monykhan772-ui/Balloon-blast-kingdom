@@ -1,1 +1,60 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balloon Blast</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sky" id="sky">
+
+    <!-- Header / HUD -->
+    <header class="hud">
+      <h1 class="logo">Balloon <span>Blast</span></h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Score</span>
+          <span class="stat-value" id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Bombs</span>
+          <span class="stat-value" id="bombs">0/5</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Best</span>
+          <span class="stat-value" id="best">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Balloons get spawned here by script.js -->
+    <div class="playfield" id="playfield"></div>
+
+    <!-- Start screen -->
+    <div class="overlay" id="startScreen">
+      <div class="panel">
+        <h2>Ready to pop?</h2>
+        <p>Tap or click balloons to score.<br>
+        Pop 5 bombs 💣 and it's game over — the game speeds up the longer you survive!</p>
+        <button class="btn" id="startBtn">Start Game</button>
+      </div>
+    </div>
+
+    <!-- Game over screen -->
+    <div class="overlay hidden" id="endScreen">
+      <div class="panel">
+        <h2 id="endTitle">Boom! Game Over</h2>
+        <p>You scored</p>
+        <p class="final-score" id="finalScore">0</p>
+        <button class="btn" id="restartBtn">Play Again</button>
+      </div>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
